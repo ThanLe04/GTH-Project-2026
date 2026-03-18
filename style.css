@@ -1,0 +1,153 @@
+/* Reset CSS cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    /* Dùng ảnh phong cảnh môi trường làm nền */
+    background: linear-gradient(rgba(0, 50, 0, 0.6), rgba(0, 50, 0, 0.6)), 
+                url('https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* --- SOLUTIONS SECTION --- */
+.solutions {
+    padding: 60px 20px;
+    background-color: #f4f9f4;
+    text-align: center;
+}
+
+.solutions h2 {
+    color: #2c3e50;
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+.solution-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    flex: 1;
+    min-width: 250px;
+}
+
+.card h3 {
+    color: #27ae60;
+    margin-bottom: 15px;
+}
+
+/* --- CONTACT FORM --- */
+.contact {
+    padding: 60px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+button {
+    background-color: #27ae60;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #219653;
+}
+
+/* Tích hợp CSS cho trạng thái Success/Error của Form theo Sub-task */
+input:valid {
+    border-color: #27ae60;
+}
+
+input:invalid:focus {
+    border-color: #e74c3c;
+    box-shadow: 0 0 5px rgba(231, 76, 60, 0.5);
+}
+
+.success-state {
+    border: 2px solid #27ae60 !important;
+    background-color: #eafaf1;
+}
+
+.error-state {
+    border: 2px solid #e74c3c !important;
+    background-color: #fceae9;
+}
+
+/* --- Responsive Mobile (CSS Media Queries) --- */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .solution-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card {
+        width: 100%;
+    }
+}
